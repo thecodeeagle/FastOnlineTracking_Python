@@ -1,23 +1,23 @@
+import os
 
 def single_tracker(title=None,*args,**kwargs):
-    varargin = single_tracker.varargin
-    nargin = single_tracker.nargin
 
 
-    param_set
+#    param_set
     ## change this directory to your own MOT2015 data path
     DataDir='Data'
 
     ## load image
-    im_dir=fullfile(DataDir,title,'img1')
-    images=dir(fullfile(im_dir,'*.jpg'))
-    framenum=numel(images)
+    im_dir=os.path.join(DataDir,title,'img1')
+    images=dir(os.path.join(im_dir,'*.jpg'))
+    framenum=len(images)
     ## load detection
 
-    det_dir=fullfile(DataDir,title,'det')
-    det_array=load(fullfile(det_dir,'det.txt'))
+    det_dir= os.path.join(DataDir,title,'det')
+    det_array=load(os.path.join(det_dir,'det.txt'))
     detections=ndet_tran(det_array,framenum)
     pnum=maxd(detections)
+
     ## Object matching
     objects=info_get(detections)
     labels,flag,scores,resulttmp,results,virscore,virobjects,virresults=blockmatch(detections,objects,framenum,im_dir,images,params,pnum,nargout=8)
@@ -27,11 +27,20 @@ def single_tracker(title=None,*args,**kwargs):
     framevisual(objects,framenum,im_dir,images)
     ## save results
     outDir='./out_res/test/'
+
+
     if logical_not(exist(outDir,'file')):
         mkdir(outDir)
 
-    saveas_txt(outDir,title,trackRes)
+
+
+    with open('outDir/title.txt', 'w') as f:
+        for line in trackRes:
+            f.write(line)
+            f.write('\n')
+
+
     return
 
 if __name__ == '__main__':
-    pass
+    single_tracker('ETH-Crossing')

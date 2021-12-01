@@ -17,3 +17,4 @@ def cxcy_to_xy(box_coordinates):
     x_max = box_coordinates[0] + w/2
     y_min = box_coordinates[1] - h/2
     y_max = box_coordinates[1] + h/2
+    return [x_min, y_min, x_max, y_max]
