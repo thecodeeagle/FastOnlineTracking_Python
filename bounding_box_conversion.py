@@ -3,10 +3,10 @@
 # Format 1 : Convert bounding boxes from boundary coordinates (x_min, y_min, x_max, y_max) to center-size coordinates (c_x, c_y, w, h)
 
 def xy_to_cxcy(box_coordinates):
-    c_x = (box_coordinates[0] + box_coordinates[2])/2
-    c_y = (box_coordinates[1] + box_coordinates[3])/2
-    w = box_coordinates[2] - box_coordinates[0]
-    h = box_coordinates[3] - box_coordinates[1]
+    c_x = (box_coordinates[0] + box_coordinates[2])/2 #center x
+    c_y = (box_coordinates[1] + box_coordinates[3])/2 #center y
+    w = box_coordinates[2] - box_coordinates[0] # width
+    h = box_coordinates[3] - box_coordinates[1] #height
     return [c_x, c_y, w, h]
 
 

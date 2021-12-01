@@ -32,13 +32,7 @@ def single_tracker(title=None,*args,**kwargs):
     if logical_not(exist(outDir,'file')):
         mkdir(outDir)
 
-
-
-    with open('outDir/title.txt', 'w') as f:
-        for line in trackRes:
-            f.write(line)
-            f.write('\n')
-
+    saveas_txt(outDir,title,trackRes);
 
     return
 

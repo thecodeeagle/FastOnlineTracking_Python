@@ -2,7 +2,7 @@
 def ndet_tran(detections=None,num=None,*args,**kwargs):
     ## divide the detection matrix into cells according to the frame number
     global params
-    for flag in arange(1,num).reshape(-1):
+    for flag in range(0,num):
         det[flag]=detections(detections(arange(),1) == flag,arange())
         det[flag][arange(),arange(1,2)]=[]
         # line below
@@ -14,4 +14,4 @@ def ndet_tran(detections=None,num=None,*args,**kwargs):
     return detections
 
 if __name__ == '__main__':
-    pass
+    ndet_tran() #Test using random variables

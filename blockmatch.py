@@ -17,7 +17,7 @@ def blockmatch(detections=None,objects=None,framenum=None,im_directory=None,imag
     virflag=0
     non_compressed_features= np.array(['gray'])
     compressed_features= np.array(['cn'])
-    #temp= load('w2crs.mat')
+    temp= load('w2crs.mat')
     w2c=w2crs
     for frame in arange(1,min(framenum,np.size(objects))).reshape(-1):
         ## visualize process
