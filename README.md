@@ -16,12 +16,12 @@ Follow the given steps in sequential order to get a local version of the reposit
 1. Click on the Fork button and select your user account when it asks you where you want to fork the repo.
 2. Once you have forked the repo, you will have a copy of it in your account. Navigate to your repo page. The url should look something like this:
 ```
-https://github.com/your-user-name/practice-git-skillz
+https://github.com/your-user-name/FastOnlineTracking_Python
 ```
 Now that you have the URL for a repository that you want to copy locally, you can use the terminal to run the git clone command followed by the URL that you copied:
 
 ```bash
-git clone https://github.com/your-username/practice-git-skillz
+git clone https://github.com/your-username/FastOnlineTracking_Python
 ```
 You have now made a local copy of a repository under your given parent directory.
 ## Installing Dependencies
