@@ -1,13 +1,15 @@
+import os
 
 
+def run_demo():
+    mydir = os.getcwd()
+    #print(mydir)
+    mydir_temp = mydir + "\\nonconverted\\"
+    os.chdir(mydir_temp)
+    #print(os.getcwd())
+    from demorun import start_execution
+    start_execution()
 
-    clc
-    clear
-    close_('all')
+if __name__ == "__main__":
 
-    addpath('./mex')
-    addpath('./matching')
-    addpath('./toolbox')
-
-    clip_title='ETH-Crossing'
-    single_tracker(clip_title)
+    run_demo()

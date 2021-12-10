@@ -2,11 +2,11 @@
 def maxd(detections=None,*args,**kwargs):
 
     ## return the maximum of detections per frame
-    N_frame=length(detections)
+    N_frame = len(detections)
     pnum=0
-    for i in arange(1,N_frame).reshape(-1):
+    for i in range(N_frame):
         l=detections[i]
-        pnum=max(pnum,size(l,1))
+        pnum=max(pnum,l.shape[0])
 
     return pnum
 

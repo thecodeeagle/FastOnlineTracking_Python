@@ -11,7 +11,7 @@ def feature_projection(x_npca=[],x_pca=[[1,2,3,4],[1,2,3,4], [1,2,3,4],[1,2,3,4]
 
     if len(x_pca)==0:
         # if no PCA-features exist, only use non-PCA
-        z= np.copy(x_npca)
+        z= x_npca
 
     else:
         # get dimensions
@@ -24,7 +24,7 @@ def feature_projection(x_npca=[],x_pca=[[1,2,3,4],[1,2,3,4], [1,2,3,4],[1,2,3,4]
         x_proj_pca= np.reshape(np.dot(x_pca,projection_matrix),(height,width,num_pca_out))
 
         if len(x_npca)==0:
-            z=np.copy(x_proj_pca)
+            z= x_proj_pca
 
         else:
             z= np.concatenate((x_npca,x_proj_pca), axis=3)

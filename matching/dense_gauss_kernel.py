@@ -23,7 +23,7 @@ def dense_gauss_kernel(sigma=20.3,x=[[[2,3], [3,2]]],y=[[[2,3], [3,2]]],*args,**
 
     k= np.exp(np.dot(- 1 / sigma*sigma,max(0,(xx.all() + yy.all() - np.dot(2,xy.all()))) / len(x))) #check if sigma*sigma is fine substitute for sigma squared
 
-    #return k
+    return k
 
 if __name__ == '__main__':
     dense_gauss_kernel()

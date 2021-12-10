@@ -1,9 +1,7 @@
+import numpy as np
 
-    clc
-    clear
-    close_('all')
-    seqs=cellarray(['ADL-Rundle-1','ADL-Rundle-3','AVG-TownCentre','ETH-Crossing','ETH-Jelmoli','ETH-Linthescher','KITTI-16','KITTI-19','PETS09-S2L2','TUD-Crossing','Venice-1'])
-    
+seqs=np.array(['ADL-Rundle-1','ADL-Rundle-3','AVG-TownCentre','ETH-Crossing','ETH-Jelmoli','ETH-Linthescher','KITTI-16','KITTI-19','PETS09-S2L2','TUD-Crossing','Venice-1'])
 
-    for s in arange(1,length(seqs)).reshape(-1):
-        single_tracker(seqs[s])
+
+for s in range(len(seqs)):
+    single_tracker(seqs[s])

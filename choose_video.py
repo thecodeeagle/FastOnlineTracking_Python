@@ -2,9 +2,9 @@ import numpy as np
 import os
 
 def choose_video(base_path=None,*args,**kwargs):
-    base_path.replace("\","/")
-    if base_path(end()) != '/':
-        base_path[end() + 1]='/'
+    #base_path.replace("\","/")
+    #if base_path(end()) != '/':
+    #    base_path[end() + 1]='/'
 
     contents= dir(base_path)
     names= np.array([])

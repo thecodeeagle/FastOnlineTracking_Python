@@ -5,8 +5,8 @@ def get_context(im=[[[1,2,3], [1,2,3]]],pos=[1,2,3],sz=[7,2,3,4],window=[[[1,2,3
 
 
     #get and process the context region
-    xs = list(range(1,sz[1]+1))
-    ys = list(range(1,sz[1]+1))
+    xs = list(range(0,sz[1]+1))
+    ys = list(range(0,sz[1]+1))
 
     for i in range(len(xs)):
         xs[i] += math.floor(pos[1] - (sz[1] / 2))
