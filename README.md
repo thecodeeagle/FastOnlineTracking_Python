@@ -51,11 +51,13 @@ python demo_single_tracker.py
 ```
 If the installation has been done correctly and no major errors are detected, the demo will run with an initial pause of a few seconds displaying the progress as follows:
 
-![Alt text](./Images/processing.JPG)
+![Alt text](./Images/process.JPG)
 
 The demo will run after processing completes and a snapshot of it is displayed below
 
 -->imge
+## References
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
