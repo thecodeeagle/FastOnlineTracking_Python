@@ -56,6 +56,8 @@ If the installation has been done correctly and no major errors are detected, th
 The demo will run after processing completes and a snapshot of it is displayed below
 
 -->imge
+## References
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
