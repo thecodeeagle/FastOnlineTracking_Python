@@ -2,7 +2,7 @@
 
 
 ## About the Project
-
+The current project focuses on implementing a tracking-by-detection framework based on the use of MOSSE (Minimum Output Sum of Squared Error) filter and ATH strategy. The technique is implemented in Python and tested out on ETH Crossing; a video sequence provided by the MOT 2015 Dataset. The algorithm utilizes the detection hypotheses efficiently and refines the detection boxes very well by analyzing the four situations of detection errors. The proposed ATH strategy helps to reduce the dependence on detection results and adaptively refining the quantities and scales of detection boxes.
 
 ## Installation
 
@@ -55,13 +55,11 @@ If the installation has been done correctly and no major errors are detected, th
 
 The demo will run after processing completes and a snapshot of it is displayed below
 
--->imge
+![Alt text](./Images/demo.png)
 ## References
-
+J. Shen, D. Yu, L. Deng and X. Dong, "Fast Online Tracking With Detection Refinement," in IEEE Transactions on Intelligent Transportation Systems, vol. 19, no. 1, pp. 162-173, Jan. 2018, doi: 10.1109/TITS.2017.2750082.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
